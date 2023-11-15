@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #7F1898;
+}
+
+.titulos{
+    height:60vh;
+    width: 100%;
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h1{
+color: #E2AED4;
+font-size: 35px;
+font-style: bold;
+font-family:Arial, Helvetica, sans-serif;
+animation: animacaoH1 1s step-start infinite;
+}
+
+
+h2{
+font-size: 25px;
+font-style: normal;
+font-family:Arial, Helvetica, sans-serif;
+animation: brilho-h2 1s linear infinite, piscar-h2 0.5s step-end infinite;
+color: #E2AED4
+}
+
+.coracao {
+    width: 50vw;
+    height: 50vh;
+    background: url('img/heart.png') no-repeat center center;
+    background-size: contain;
+    animation: pulso 2s infinite; /* 2s de duração, repetição infinita */
+}
+
+@keyframes pulso {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes animacaoH1 {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+        color: #dde2ae;
+    }
+    50% {
+        transform: translateY(10px);
+        opacity: 1;
+        color: rgb(247, 243, 10);
+    }
+    100% {
+        transform: translateY(0);
+        color: #6eddf8; 
+    }
+}
+
+
+@keyframes brilho-h2 {
+    0% {
+        text-shadow: 0 0 10px #fff;
+    }
+    50% {
+        text-shadow: 0 0 20px #ffffff, 0 0 30px #47daff, 0 0 40px #cfdde0; 
+    }
+    100% {
+        text-shadow: 0 0 10px #fff;
+    }
+}
+
+
+@keyframes piscar-h2 {
+    0% {
+        visibility: visible;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
